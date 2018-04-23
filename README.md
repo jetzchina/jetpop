@@ -1,11 +1,11 @@
-# 首先引入主体文件
+## 引入主体文件
 <br/>&lt;link rel="stylesheet" href="css/jetpop.css"&gt;</br> 
 </br> &lt;script type="text/javascript" src="http:// code.jquery.com/jquery-latest.js">&lt;/script&gt;</br> 
 </br> &lt;script src="js/jetpop.js"&gt;&lt;/script&gt;</br> 
 
 
 
-# 信息弹窗代码
+## 信息弹窗代码
 ```javascript
 <script>
 popmsg({msg:"这是一个信息提示！"}); // 信息提示,如果需要修改弹窗层数：popmsg({msg:"这是一个信息提示！",zindex:900}); 为空则默认900 
@@ -15,7 +15,7 @@ popmsg({dom:".popbox"}); // 弹出DOM
 ```
 
 
-# 图片相册代码调用代码
+## 图片相册代码调用代码
 
 ```javascript
 <script>
