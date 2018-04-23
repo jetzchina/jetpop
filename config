@@ -1,0 +1,14 @@
+
+# one(jetchou@jetchou.com)
+
+    Host github.com
+
+　　HostName github.com
+
+　　PreferredAuthentications publickey
+
+　　IdentityFile ../id_jet
+
+　　User jet
+
+ 
