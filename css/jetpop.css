@@ -1,0 +1,17 @@
+
+/*---------Jetpop css by jetchou.com---------*/
+#jetpoppic{position:fixed;width:100%;top:0px;left:0px;}
+.jetpop_bg{position:fixed;width:100%;top:0px;left:0px;background-color: #000;}
+.loading{background:url(../images/loading.gif) no-repeat center center #000;}
+.poppic_close{display:none;background:url(../images/arrow-icons.png) no-repeat -100px center;cursor:pointer;position:absolute;width:35px;height:35px;top:2%;right:2%;}
+.pop_prev{display:none;background:url(../images/arrow-icons.png) no-repeat 0px center;cursor:pointer;position:absolute;width:42px;height:128px;top:40%;left:2%;}
+.pop_next{display:none;background:url(../images/arrow-icons.png) no-repeat -42px center;cursor:pointer;position:absolute;width:42px;height:128px;top:40%;right:2%;}
+.popimg{display:none;position:absolute;top:50%;left:50%;left:50%;}
+.show-picture{ position: relative;transition: all 0.3s ease-in-out;transform: scale(0, 0);}
+.show-picture span{ position: absolute; left: 0;width:100%; padding:5px 0;font-size:0.7rem; text-align: center;background:rgba(0,0,0,.5); color: #fff;}
+#jetpopmsg{position:fixed;width:100%;top:0px;left:0px;}
+.pophtml{display:none;width:auto;background:#fff;box-shadow:1px 1px 50px rgba(0,0,0,.3);position:absolute;height:auto;top:50%;left:50%;box-sizing:border-box;}
+.pop_close{font-family:arial;font-size:20px;text-align:center;cursor:pointer;position:absolute;width:28px;height:28px;line-height:24px;top:0px;right:0px;color:#000; background: #fff; opacity: 0.6;}
+.normal_msg{width:280px;text-align:center;}
+.normal_msg_text{line-height:23px; padding:50px 0 30px 0;}
+.normal_msg_button{padding:8px 20px;background-color:#1E9FFF;color: #fff;cursor:pointer; display:inline-block; margin-bottom:20px;}
