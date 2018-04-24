@@ -62,7 +62,7 @@ popalbum = function (pop){
 		}
 		else{
 			popmsg({html:"<div style='padding:30px 50px;'>"+object+"</div>"});
-			setTimeout(function(){popmsgclose('#jetpopmsg');},1000);
+			setTimeout(function(){popmsgclose();},1000);
 			return false;
 		}
 		$("body").prepend('<div id="jetpoppic"><div class="pop_next" onclick="popimg(next)"></div><div class="pop_prev" onclick="popimg(prev)"></div><div class="poppic_close" onclick="poppicclose()"></div><div class="popimg">'+html+'</div><div><div class="jetpop_bg" id="jetpop_bg"></div>');
@@ -204,20 +204,19 @@ popmsg = function(pop){
 	  }
   	zindex=parseInt(zindex)+1;
   }
-  popdom="'.popmsg"+zindex+"'";
   if(pop.dom){
     content = $(pop.dom).prop("outerHTML");
     //$(html).hide(); 
     html = content;
-    if(!html){html='<div class="normal_msg"><p class="normal_msg_text">无法显示，请稍后再试！</p><span class="normal_msg_button" onclick="popmsgclose('+popdom+')">关闭</span></div>'}
+    if(!html){html='<div class="normal_msg"><p class="normal_msg_text">无法显示，请稍后再试！</p><span class="normal_msg_button" onclick="popmsgclose()">关闭</span></div>'}
   }
   if(pop.msg){
-  	html='<div class="normal_msg"><p class="normal_msg_text">'+pop.msg+'</p><span class="normal_msg_button" onclick="popmsgclose('+popdom+')">关闭</span></div>';
+  	html='<div class="normal_msg"><p class="normal_msg_text">'+pop.msg+'</p><span class="normal_msg_button" onclick="popmsgclose()">关闭</span></div>';
   }
   if(pop.html){
   	html=pop.html;
   }
-  $("body").prepend('<div id="jetpopmsg" class="popmsg'+zindex+'" style="height:'+wheight+'px;z-index:'+(zindex+1)+';"><div class="pophtml pophtml'+zindex+'">'+html+'<div class="pop_close" onclick="popmsgclose('+popdom+')">x</div></div><div>');
+  $("body").prepend('<div id="jetpopmsg" class="popmsg'+zindex+'" style="height:'+wheight+'px;z-index:'+(zindex+1)+';"><div class="pophtml pophtml'+zindex+'">'+html+'<div class="pop_close" onclick="popmsgclose()">x</div></div><div>');
   pwidth = $(".pophtml"+zindex).outerWidth(true);
   pheight = $(".pophtml"+zindex).outerHeight(true);
   if(pheight>=wheight){
@@ -239,8 +238,8 @@ poppicclose =function(){
 		$("#jetpop_bg").remove();
 	}
 }
-popmsgclose =function(object){
-	$(object).remove();
+popmsgclose =function(){
+	$("#jetpopmsg:first").remove();
  	if(!$("#jetpoppic").length && !$(".pophtml").length){
 		$("#jetpop_bg").remove();
 	}
