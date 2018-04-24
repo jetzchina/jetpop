@@ -228,8 +228,6 @@ popmsg = function(pop){
   	pwidth = wwidth-20;
     $(".pophtml"+zindex).css({"width":pwidth,"overflow-x":"scroll"});
   }
-  console.log(pwidth);
-  console.log($(".pophtml"+zindex));
   $(".pophtml"+zindex).css({"z-index":zindex+1,"margin-left":"-"+pwidth/2+"px","margin-top":"-"+pheight/2+"px"});
   $(".pop_close").css({"z-index":zindex+1})
   $(".pophtml"+zindex).fadeIn();
