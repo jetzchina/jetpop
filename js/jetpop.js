@@ -190,6 +190,7 @@ popmsg = function(pop){
   	zindex=900;
   }
   wheight=$(window).height();
+  wwidth=$(window).width();
   if(!$("#jetpop_bg").length){
   	$("body").prepend('<div class="jetpop_bg" id="jetpop_bg"></div>');
   	$(".jetpop_bg").css({opacity:"0.3","height":wheight+"px","z-index":zindex})
@@ -217,8 +218,18 @@ popmsg = function(pop){
   	html=pop.html;
   }
   $("body").prepend('<div id="jetpopmsg" class="popmsg'+zindex+'" style="height:'+wheight+'px;z-index:'+(zindex+1)+';"><div class="pophtml pophtml'+zindex+'">'+html+'<div class="pop_close" onclick="popmsgclose('+popdom+')">x</div></div><div>');
-  pwidth = $(".pophtml"+zindex).innerWidth();
-  pheight = $(".pophtml"+zindex).innerHeight();
+  pwidth = $(".pophtml"+zindex).outerWidth(true);
+  pheight = $(".pophtml"+zindex).outerHeight(true);
+  if(pheight>=wheight){
+  	pheight = wheight-20;
+    $(".pophtml"+zindex).css({"height":pheight,"overflow-y":"scroll"});
+  }
+  if(pwidth>=wwidth){
+  	pwidth = wwidth-20;
+    $(".pophtml"+zindex).css({"width":pwidth,"overflow-x":"scroll"});
+  }
+  console.log(pwidth);
+  console.log($(".pophtml"+zindex));
   $(".pophtml"+zindex).css({"z-index":zindex+1,"margin-left":"-"+pwidth/2+"px","margin-top":"-"+pheight/2+"px"});
   $(".pop_close").css({"z-index":zindex+1})
   $(".pophtml"+zindex).fadeIn();
