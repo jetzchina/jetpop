@@ -15,7 +15,7 @@ popmsg({dom:".popbox"}); // 弹出DOM
 ```
 
 
-## 图片相册代码调用代码
+## 图片相册调用代码
 
 ```javascript
 <script>
